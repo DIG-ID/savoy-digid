@@ -11,7 +11,7 @@ function nm_child_theme_styles() {
 	$theme_version = $the_theme->get( 'Version' );
 
 	// Register Theme main style.
-	wp_register_style( 'savoy-digid-styles', get_template_directory_uri() . '/dist/main.css', array(), $theme_version );
+	wp_register_style( 'savoy-digid-styles', get_stylesheet_directory_uri() . '/dist/main.css', array(), $theme_version );
 
 	// Add styles inline.
 	//wp_add_inline_style( 'hotel-inside-theme-styles', hi_get_font_face_styles() );
@@ -21,7 +21,7 @@ function nm_child_theme_styles() {
 
 	wp_register_script(
 		'savoy-digid-scripts',
-		get_template_directory_uri() . '/dist/main.js',
+		get_stylesheet_directory_uri() . '/dist/main.js',
 		array(),
 		$theme_version,
 		true
