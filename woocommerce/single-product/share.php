@@ -28,11 +28,12 @@ if ( $nm_theme_options['product_share_buttons'] ) {
     
     $permalink_escaped = esc_url( get_permalink() );
     $product_image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), false, '' );
+    $site_title = wp_title();
     $share_links_escaped = apply_filters( 'nm_product_share_links', array(
         '<a href="//www.facebook.com/sharer.php?u=' . $permalink_escaped . '" target="_blank" title="' . esc_attr__( 'Share on Facebook', 'nm-framework' ) . '"><i class="nm-font nm-font-facebook"></i></a>',
         '<a href="//twitter.com/share?url=' . $permalink_escaped . '" target="_blank" title="' . esc_attr__( 'Share on Twitter', 'nm-framework' ) . '"><i class="nm-font nm-font-twitter"></i></a>',
         '<a href="//pinterest.com/pin/create/button/?url=' . $permalink_escaped . '&amp;media=' . esc_url( $product_image[0] ) . '&amp;description=' . urlencode( get_the_title() ) . '" target="_blank" title="' . esc_attr__( 'Pin on Pinterest', 'nm-framework' ) . '"><i class="nm-font nm-font-pinterest"></i></a>',
-        '<a href="//www.linkedin.com/shareArticle?&url=' . $permalink_escaped . '" target="_blank" title="' . esc_attr__( 'Share on LinkedIn', 'nm-framework' ) . '"><i class="nm-font nm-font-linkedin"></i></a>'
+        '<a href="//www.linkedin.com/shareArticle?&url=' . $permalink_escaped . '&amp;title=' . $site_title . '&amp;source=' . $permalink_escaped . '" target="_blank" title="' . esc_attr__( 'Share on LinkedIn', 'nm-framework' ) . '"><i class="nm-font nm-font-linkedin"></i></a>'
     ) );
 } else {
     $wrapper_class = '';
