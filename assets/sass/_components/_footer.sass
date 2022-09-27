@@ -1,9 +1,48 @@
+
+
 .sections-footer-icons
   .nm-footer-bar-inner
     background-color: $light-bg
 .section-footer-content
   .nm-footer-bar-inner
+    padding-top: 50px
+    padding-bottom: 50px
     background-color: $dark-bg
+    .footer-widget-title
+      font-family: $font-oswald
+      font-weight: 300
+      font-size: 20px
+      text-transform: uppercase
+      color: $main-blue
+      margin-bottom: 30px
+    #nm-footer-bar-menu
+      column-count: 3
+      .menu-item
+        a
+          font-family: $font-oswald
+          font-size: 16px
+          text-transform: uppercase
+          letter-spacing: 0.36px
+          color: $light-bg
+          transition: all .3s ease-in-out
+          &:hover
+            color: $main-gold
+    .footer-payment-methods-wrapper
+      display: flex
+      figure
+        &:first-of-type
+          margin-right: 20px
 .section-footer-copyright
   .nm-footer-bar-inner
+    padding-top: 20px
+    padding-bottom: 20px
     background-color: $grey-bg
+    .nm-menu-item-copyright.menu-item
+      color: #B5B5B5
+    .nm-footer-bar-social li
+      a
+        color: #BABBBB
+        transition: all .3s ease-in-out
+        &:hover
+          color: $main-blue
+
