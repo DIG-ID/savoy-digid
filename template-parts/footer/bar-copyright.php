@@ -1,14 +1,15 @@
 <?php global $nm_theme_options; ?>
-<div class="copyright-section">
+<section class="section-footer-copyright">
 	<div class="nm-footer-bar-inner">
 		<div class="nm-row">
 			<div class="col-md-6">
 			<?php
-				$copyright_text = ( isset( $nm_theme_options['footer_bar_text'] ) && strlen( $nm_theme_options['footer_bar_text'] ) > 0 ) ? $nm_theme_options['footer_bar_text'] : '';
-				if ( $nm_theme_options['footer_bar_text_cr_year'] ) {
-					$copyright_text = sprintf( '&copy; %s %s', date( 'Y' ), $copyright_text );
-			} ?>
-			 <?php if ( ! $display_copyright_text ) : ?>
+			$copyright_text = ( isset( $nm_theme_options['footer_bar_text'] ) && strlen( $nm_theme_options['footer_bar_text'] ) > 0 ) ? $nm_theme_options['footer_bar_text'] : '';
+			if ( $nm_theme_options['footer_bar_text_cr_year'] ) {
+				$copyright_text = sprintf( '&copy; %s %s', date( 'Y' ), $copyright_text );
+			}
+			?>
+			<?php if ( ! $display_copyright_text ) : ?>
 				<p class="nm-menu-item-copyright menu-item"><span><?php echo wp_kses_post( $copyright_text ); ?></span></p>
 			<?php endif; ?>
 			</div>
@@ -22,4 +23,4 @@
 			</div>
 		</div>
 	</div>
-</div>
+</section>
