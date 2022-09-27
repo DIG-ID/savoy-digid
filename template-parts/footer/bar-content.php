@@ -1,3 +1,4 @@
+<?php global $nm_theme_options; ?>
 <section class="section-footer-content">
 	<div class="nm-footer-bar-inner">
 		<div class="nm-row">
