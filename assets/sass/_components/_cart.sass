@@ -1,0 +1,36 @@
+.nm-page-default
+  .nm-page-default-col
+    .woocommerce
+      .woocommerce-cart-form
+        h1
+          @include stricker-heading-oswald
+        .shop_table
+          .actions
+            .button.border
+              @include stricker-button-default
+      .cart-collaterals
+        h2
+          @include stricker-heading-oswald
+        .cart_totals
+          .shop_table
+            .cart-subtotal
+              th
+                text-transform: uppercase
+            .woocommerce-shipping-totals
+              th,
+              .nm-shipping-th-title
+                text-transform: uppercase
+            #shipping_method
+              li
+                text-transform: uppercase
+            .order-total
+              th
+                text-transform: uppercase
+            .shipping-calculator-button
+              text-transform: uppercase
+            .shipping-calculator-form
+              .button
+                @include stricker-button-default
+          .wc-proceed-to-checkout
+            .checkout-button.button.alt
+              @include stricker-button-primary

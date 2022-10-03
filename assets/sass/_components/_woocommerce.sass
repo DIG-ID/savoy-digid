@@ -22,30 +22,11 @@
                   text-transform: none
 
 @import 'product'
+@import 'cart'
 
 #nm-widget-panel
   .buttons
     .button.border
-      font-family: $font-euro
-      font-weight: 900
-      font-size: 14px
-      text-transform: uppercase
-      background-color: $grey-bg
-      color: $light-bg
-      transition: all .3s ease-in-out
-      margin-top: 20px
-      &:hover
-        background-color: $main-gold
-        color: #212529
+      @include stricker-button-default
     .button.checkout
-      font-family: $font-euro
-      font-weight: 900
-      font-size: 14px
-      text-transform: uppercase
-      background-color: $main-gold
-      color: #212529
-      transition: all .3s ease-in-out
-      margin-top: 20px
-      &:hover
-        background-color: $grey-bg
-        color: $light-bg
+      @include stricker-button-primary

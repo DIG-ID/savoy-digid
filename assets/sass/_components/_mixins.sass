@@ -1,0 +1,34 @@
+@mixin stricker-button-default
+  font-family: $font-euro
+  font-weight: 900
+  font-size: 12px
+  text-transform: uppercase
+  background-color: $grey-bg
+  border: none
+  color: $light-bg
+  transition: all .3s ease-in-out
+  padding-top: 15px
+  padding-bottom: 15px
+  &:hover
+    background-color: $main-gold
+    color: #212529
+
+@mixin stricker-button-primary
+  font-family: $font-euro
+  font-weight: 900
+  font-size: 12px
+  text-transform: uppercase
+  background-color: $main-gold
+  border: none
+  color: #212529
+  transition: all .3s ease-in-out
+  padding-top: 15px
+  padding-bottom: 15px
+  &:hover
+    background-color: $grey-bg
+    color: $light-bg
+
+@mixin stricker-heading-oswald
+  font-family: $font-oswald
+  text-transform: uppercase
+  letter-spacing: 1333.3
