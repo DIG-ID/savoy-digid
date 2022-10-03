@@ -1,3 +1,10 @@
+.woocommerce
+  .return-to-shop
+    .button.wc-backward
+      margin-top: 20px
+      @include stricker-button-default
+  
+
 #nm-shop-products
   .nm-products
     .product
@@ -28,5 +35,11 @@
   .buttons
     .button.border
       @include stricker-button-default
+      border: 1px solid $dark-grey
+      &:hover
+        border: 1px solid $main-gold
     .button.checkout
       @include stricker-button-primary
+      border: 1px solid $main-gold
+      &:hover
+        border: 1px solid $main-gold
