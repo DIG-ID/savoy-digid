@@ -2,6 +2,14 @@
   .nm-single-product-showcase
     .nm-single-product-summary-col
       .nm-product-summary-inner-col
+        #nm-product-accordion
+          .nm-product-accordion-panel
+            .nm-product-accordion-heading
+              text-transform: uppercase
+        #nm-product-meta
+          .sku_wrapper,
+          .posted_in
+            text-transform: uppercase
         .product_title.entry-title
           font-family: $font-oswald
           font-weight: 400
@@ -26,16 +34,59 @@
             color: $dark-grey
         .nm-variations-form,
         .cart
-          .woocommerce-variation-add-to-cart,
-          .nm-simple-add-to-cart-button
-            font-family: $font-euro
-            font-weight: 900
-            font-size: 16px
-            text-transform: uppercase
-            background-color: $grey-bg
-            color: $light-bg
-            transition: all .3s ease-in-out
-            margin-top: 20px
-            &:hover
-              background-color: $main-gold
-              color: #212529
+          .variations
+            .label
+              label
+                font-family: $font-oswald
+                font-weight: 300
+                text-transform: uppercase
+                color: $dark-grey
+          .woocommerce-variation-add-to-cart
+            .nm-quantity-wrap.qty-show
+              border-bottom: 1px solid #dadada
+              label
+                font-family: $font-oswald
+                font-weight: 300
+                text-transform: uppercase
+                color: $dark-grey
+            .nm-variable-add-to-cart-button
+              font-family: $font-euro
+              font-weight: 900
+              font-size: 14px
+              text-transform: uppercase
+              background-color: $grey-bg
+              color: $light-bg
+              transition: all .3s ease-in-out
+              margin-top: 20px
+              &:hover
+                background-color: $main-gold
+                color: #212529
+
+#nm-related
+  .nm-row
+    h2
+      font-family: $font-oswald
+      font-weight: 400
+      font-size: 24px
+      text-transform: uppercase
+      letter-spacing: 1333.3
+  .nm-products
+    .product
+      .nm-shop-loop-product-wrap
+        .nm-shop-loop-thumbnail
+        .nm-shop-loop-details
+          .woocommerce-loop-product__title
+            .nm-shop-loop-title-link
+              font-family: $font-oswald
+              font-weight: 400
+              font-size: 22px
+              color: $dark-grey
+              text-transform: uppercase
+            .price
+              font-family: $font-oswald
+              font-weight: 300
+              font-size: 18px
+              color: $dark-grey
+              text-transform: uppercase
+              .woocommerce-price-suffix
+                text-transform: none
