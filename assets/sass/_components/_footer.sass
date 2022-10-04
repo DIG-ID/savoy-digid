@@ -1,5 +1,3 @@
-
-
 .sections-footer-icons
   .nm-footer-bar-inner
     padding-top: 70px
@@ -84,3 +82,43 @@
         &:hover
           color: $main-blue
 
+@media (max-width: 768px)
+  .section-footer-content
+    .nm-footer-bar-inner
+      .nm-row
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        .nm_column
+          margin-bottom: 40px
+          &:last-of-type
+            margin-bottom: 0px
+          #nm-footer-bar-menu
+            column-count: auto
+  .sections-footer-icons
+    .nm-footer-bar-inner
+      .nm-row
+        flex-direction: column
+      .icon-and-text-wrapper
+        justify-content: flex-start
+        align-items: flex-start
+        margin-bottom: 20px
+        &:last-of-type
+          margin-bottom: 0px
+        .icon-and-text
+          justify-content: flex-start
+          p
+            font-size: 16px
+          figure
+            
+            margin-right: 15px
+            svg
+              max-width: 80px
+
+@media (max-width: 400px)
+  .section-footer-copyright
+    .nm-footer-bar-inner
+
+      .nm-menu-item-copyright.menu-item
+
+        font-size: 12px

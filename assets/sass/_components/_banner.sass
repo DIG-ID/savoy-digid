@@ -18,8 +18,8 @@
     background-color: $main-gold
     color: #212529
     font-family: $font-euro
-    font-size: 16px
-    font-weight: 800
+    font-size: 14px
+    font-weight: 900
     text-transform: uppercase
     padding: 15px 40px
     box-shadow: 0px 3px 6px #00000029
@@ -30,3 +30,45 @@
       color: #F0F0F0
   .slick-dots li.slick-active button
     border-color: $main-gold
+
+@media ( max-width: 768px )
+  .nm-banner.alt-mobile-layout .nm-banner-content
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    background-color: transparent
+  .nm-banner-slider.plugin-slick
+    h1.nm-banner-title
+      font-size: 33px
+    .nm-banner-link.nm-banner-shop-link.type-btn
+      font-size: 13px
+      padding: 15px 20px
+  .home-stricker-logo
+    .wpb_column
+      .wpb_wrapper
+        .wpb_single_image
+          .wpb_wrapper.vc_figure
+            .vc_single_image-wrapper
+              padding: 0px 40px
+  .home-message
+    .wpb_column
+      .wpb_wrapper
+        .wpb_text_column
+          .wpb_wrapper
+            h2
+              font-size: 18px !important
+
+@media ( max-width: 400px )
+  .nm-banner-slider.plugin-slick
+    h1.nm-banner-title
+      font-size: 32px
+    .nm-banner-link.nm-banner-shop-link.type-btn
+      font-size: 11px
+      padding: 10px 15px
+  .home-message
+    .wpb_column
+      .wpb_wrapper
+        .wpb_text_column
+          .wpb_wrapper
+            h2
+              font-size: 13px !important

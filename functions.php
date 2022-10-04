@@ -33,3 +33,10 @@ function nm_child_theme_styles() {
 
 }
 add_action( 'wp_enqueue_scripts', 'nm_child_theme_styles', 1000 );// Note: Use priority "1000" to include the stylesheet after the parent theme stylesheets
+
+
+/*add_action('woocommerce_payment_complete','my_custom_function');
+
+function my_custom_function( $order_id ) {
+	$order = new WC_Order( $order_id );
+}*/
