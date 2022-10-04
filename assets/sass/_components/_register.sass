@@ -6,13 +6,15 @@
           h2
             @include stricker-heading-oswald
           .register
+            .form-row.form-row-wide
+              label
+                @include stricker-heading-oswald
             .form-actions
               .woocommerce-Button.button
                 @include stricker-button-default
-              #nm-show-register-button,
-              #nm-show-login-button
-                border-color: $dark-grey
-                font-family: $font-euro
-                font-weight: 900
-                font-size: 12px
-                text-transform: uppercase
+            #nm-show-login-button
+              border-color: $dark-grey
+              font-family: $font-euro
+              font-weight: 900
+              font-size: 12px
+              text-transform: uppercase
