@@ -2,12 +2,13 @@
 
 <div class="nm-page-not-found">
 	<div class="nm-row">
-		<div class="col-xs-12">
-			<h2><?php esc_html_e( 'Page not found.', 'nm-framework' ); ?></h2>
+		<div class="col-xs-12 not-found-wrapper">
+			<h2><?php esc_html_e( 'Ups ... du hast es kaputt gemacht!', 'nm-framework' ); ?></h2>
 			<hr>
-			<img src="" alt="">
-			<p><?php esc_html_e( 'It looks like nothing was found at this location. Click the link below to return home.', 'nm-framework' ); ?></p>
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button"><i class="nm-font nm-font-arrow-left"></i> <?php esc_html_e( 'Home', 'nm-framework' ); ?></a>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/DominicStricker-404-illustration.svg" alt="404 illustration">
+			<p><?php esc_html_e( 'Nur ein Scherz, mach dir keine Sorgen.
+Diese Seite wurde nicht gefunden.', 'nm-framework' ); ?></p>
+			<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="button"><i class="nm-font nm-font-arrow-left"></i> <?php esc_html_e( 'zur statseite', 'nm-framework' ); ?></a>
 		</div>
 	</div>
 </div>
