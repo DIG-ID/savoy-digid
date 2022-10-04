@@ -2,14 +2,15 @@
   .woocommerce
     #customer_login
       .nm-myaccount-login-inner
-        #nm-login-wrap
+        #nm-register-wrap
           h2
             @include stricker-heading-oswald
-          .login
+          .register
             .form-actions
               .woocommerce-Button.button
                 @include stricker-button-default
-              #nm-show-register-button
+              #nm-show-register-button,
+              #nm-show-login-button
                 border-color: $dark-grey
                 font-family: $font-euro
                 font-weight: 900
