@@ -1,0 +1,24 @@
+.woocommerce-checkout.woocommerce-page
+  .woocommerce
+    .checkout.woocommerce-checkout
+      #customer_details
+        .woocommerce-billing-fields
+          h3
+            @include stricker-heading-oswald
+          .woocommerce-billing-fields__field-wrapper
+            .form-row
+        .woocommerce-shipping-fields
+          #ship-to-different-address
+            h3
+              @include stricker-heading-oswald
+      #order_review_heading
+        @include stricker-heading-oswald
+      #order_review
+        .shop_table.woocommerce-checkout-review-order-table
+          tr
+            th
+              @include stricker-heading-oswald
+        #payment
+          .form-row.place-order
+            .button
+              @include stricker-button-primary
