@@ -130,7 +130,7 @@ if ( isset( $is_popup ) ) {
                     <button type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
                     
                     <?php if ( $show_reg_form ) : ?>
-                    <div class="nm-login-form-divider"><span><?php esc_html_e( 'Or', 'nm-framework' ); ?></span></div>
+                    <div class="nm-login-form-divider"><span><?php esc_html_e( 'oder', 'nm-framework' ); ?></span></div>
                     
                     <a href="#" id="nm-show-login-button" class="button border"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></a>
                     <?php endif; ?>
