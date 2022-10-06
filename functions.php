@@ -40,3 +40,13 @@ add_action( 'wp_enqueue_scripts', 'nm_child_theme_styles', 1000 );// Note: Use p
 function my_custom_function( $order_id ) {
 	$order = new WC_Order( $order_id );
 }*/
+
+add_filter( 'woocommerce_checkout_fields', 'digid_remove_checkout_fields' );
+
+function digid_remove_checkout_fields( $fields ) {
+
+	unset($fields['billing']['billing_state']);
+
+return $fields;
+
+}
