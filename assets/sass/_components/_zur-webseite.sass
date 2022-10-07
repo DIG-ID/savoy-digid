@@ -3,7 +3,7 @@
   right: -80px
   top: 50%
   transform: translateY(-50%)
-  background-color: $main-blue
+  background-color: $dark-grey
   padding: 10px
   display: flex
   flex-direction: column-reverse
@@ -19,7 +19,7 @@
     width: 50px
     height: 100%
     display: block
-    background-color: $main-blue
+    background-color: $dark-grey
     display: flex
     justify-content: center
     align-items: center
@@ -29,12 +29,12 @@
     svg
       max-width: 20px
       transform: rotate(-90deg)
-      fill: #fff
+      fill: $main-gold
   svg
     transition: all .4s ease-in-out
     max-width: 152px
     .a
-      fill: $dark-grey
+      fill: $main-gold
   .text
     font-family: $font-euro
     font-size: 12px
@@ -45,11 +45,11 @@
     margin: 0
   &:hover
     right: -60px
-    background-color: $dark-grey
+    background-color: $main-blue
     .icon-arrow
       //transform: translateX(0px)
       right: -50px
       opacity: 1
     svg
       .a
-        fill: $main-gold
+        fill: $dark-grey
