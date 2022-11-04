@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 6.0.0
+ * @version 7.0.1
  NM: Modified */
 
 if ( ! defined( 'ABSPATH' ) ) {
@@ -70,8 +70,8 @@ if ( isset( $is_popup ) ) {
                 </p>
                 
                 <p class="form-actions">
-                    <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>                 
-                    <button type="submit" class="woocommerce-Button button" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
+                    <?php wp_nonce_field( 'woocommerce-login', 'woocommerce-login-nonce' ); ?>
+                    <button type="submit" class="woocommerce-button button woocommerce-form-login__submit<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="login" value="<?php esc_attr_e( 'Log in', 'woocommerce' ); ?>"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></button>
                     
                     <?php if ( $show_reg_form ) : ?>
                     <div class="nm-login-form-divider"><span><?php esc_html_e( 'oder', 'nm-framework' ); ?></span></div>
@@ -127,10 +127,10 @@ if ( isset( $is_popup ) ) {
                 
                 <p class="form-actions">
                     <?php wp_nonce_field( 'woocommerce-register', 'woocommerce-register-nonce' ); ?>
-                    <button type="submit" class="woocommerce-Button button" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
+                    <button type="submit" class="woocommerce-Button woocommerce-button button<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?> woocommerce-form-register__submit" name="register" value="<?php esc_attr_e( 'Register', 'woocommerce' ); ?>"><?php esc_html_e( 'Register', 'woocommerce' ); ?></button>
                     
                     <?php if ( $show_reg_form ) : ?>
-                    <div class="nm-login-form-divider"><span><?php esc_html_e( 'oder', 'nm-framework' ); ?></span></div>
+                    <div class="nm-login-form-divider"><span><?php esc_html_e( 'Or', 'nm-framework' ); ?></span></div>
                     
                     <a href="#" id="nm-show-login-button" class="button border"><?php esc_html_e( 'Log in', 'woocommerce' ); ?></a>
                     <?php endif; ?>

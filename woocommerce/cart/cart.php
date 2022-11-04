@@ -12,7 +12,7 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce/Templates
- * @version 3.8.0
+ * @version 7.0.1
  NM: Modified */
 
 defined( 'ABSPATH' ) || exit;
@@ -150,8 +150,8 @@ do_action( 'woocommerce_before_cart' ); ?>
                 
                 <a href="<?php echo esc_url( get_permalink( wc_get_page_id( 'shop' ) ) ); ?>" id="nm-cart-continue-button" class="button border"><?php esc_attr_e( 'Continue shopping', 'woocommerce' ); ?></a>
                 
-                <button type="submit" class="button border" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
-
+                <button type="submit" class="button border<?php echo esc_attr( wc_wp_theme_get_element_class_name( 'button' ) ? ' ' . wc_wp_theme_get_element_class_name( 'button' ) : '' ); ?>" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+                
 				<?php do_action( 'woocommerce_cart_actions' ); ?>
                 
                 <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
@@ -169,6 +169,8 @@ do_action( 'woocommerce_before_cart' ); ?>
 <?php do_action( 'woocommerce_before_cart_collaterals' ); ?>
 
 <div class="cart-collaterals">
+    
+    <h2><?php _e( 'Cart totals', 'woocommerce' ); ?></h2>
     
     <?php if ( ! wp_doing_ajax() && wc_coupons_enabled() ) { ?>
         <div class="nm-coupon-wrap">
