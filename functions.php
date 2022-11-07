@@ -59,3 +59,9 @@ return $fields;
 	$order->update_status( 'completed' );
 
 }
+
+
+/**
+ * Remove Order Notes - WooCommerce Checkout
+ */
+add_filter( 'woocommerce_enable_order_notes_field', '__return_false', 9999 );
