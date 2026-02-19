@@ -75,12 +75,16 @@
     background-color: $grey-bg
     .nm-menu-item-copyright.menu-item
       color: #B5B5B5
-    .nm-footer-bar-social li
-      a
-        color: #BABBBB
-        transition: all .3s ease-in-out
-        &:hover
-          color: $main-blue
+    .nm-footer-bar-social
+      justify-content: flex-end
+      align-items: center
+      li
+        padding-left: 16px
+        a
+          color: #BABBBB
+          transition: all .3s ease-in-out
+          &:hover
+            color: $main-blue
 
 @media (max-width: 768px)
   .section-footer-content
@@ -114,6 +118,22 @@
             margin-right: 15px
             svg
               max-width: 80px
+  .section-footer-copyright
+    .nm-footer-bar-inner
+      > .nm-row
+        display: flex
+        flex-direction: column
+      .col-social
+        order: 1
+        margin-bottom: 20px
+      .col-copyright
+        order: 2
+      .nm-menu-item-copyright.menu-item
+        text-align: center
+      .nm-footer-bar-social
+        justify-content: center
+        li
+          padding: 0px 8px
 
 @media (max-width: 400px)
   .section-footer-copyright
