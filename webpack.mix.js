@@ -1,5 +1,15 @@
 // webpack.mix.js
 
+const os = require('os');
+const path = require('path');
+
+// Caminho para os certificados do Local by WPEngine
+const certPath = path.join(
+  os.homedir(),
+  'AppData/Roaming/Local/run/router/nginx/certs' // Windows
+  // 'Library/Application Support/Local/run/router/nginx/certs' // Mac
+);
+
 let mix = require('laravel-mix');
 
 mix
@@ -14,7 +24,15 @@ mix
 
   .disableNotifications()
   .browserSync({
-    proxy: "localhost/stricker-shop",
+    proxy: "https://stricker-shop.digid",
+    host: "stricker-shop.digid",
+    open: "external",
+    port: 3000,
+    ws: true,
+    https: {
+      key: path.join(certPath, 'stricker-shop.digid.key'),
+      cert: path.join(certPath, 'stricker-shop.digid.crt'),
+    },
     files: ["./**/*.php", "./dist/*.js", "./dist/*.css"]
   });
 
